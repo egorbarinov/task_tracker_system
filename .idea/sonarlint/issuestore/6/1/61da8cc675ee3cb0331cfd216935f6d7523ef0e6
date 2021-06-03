@@ -1,0 +1,17 @@
+
+E
+java:S3740"/Provide the parametrized type for this generic.(“›ñ˜
+E
+java:S3740"/Provide the parametrized type for this generic.(ññ‹†
+r
+java:S1450"\Remove the "enteredTaskId" field and declare it as a local variable in the relevant methods.(­ğº¬
+r
+java:S1450"\Remove the "enteredUserId" field and declare it as a local variable in the relevant methods.(‘¶·
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(éü˜÷üÿÿÿÿ
+N	java:S106("9Replace this use of System.out or System.err by a logger.(ê¨—
+N	java:S106/"9Replace this use of System.out or System.err by a logger.(ê×¼©
+N	java:S1066"9Replace this use of System.out or System.err by a logger.(¬á¼¯
+N	java:S106="9Replace this use of System.out or System.err by a logger.(ê¨—
+E
+java:S6212C"/Declare this local variable with "var" instead.(·âÆÆ
+U	java:S106F"9Replace this use of System.out or System.err by a logger.(Âå8»÷µŠ/

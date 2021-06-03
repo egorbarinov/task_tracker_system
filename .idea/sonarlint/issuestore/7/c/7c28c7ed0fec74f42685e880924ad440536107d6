@@ -1,0 +1,15 @@
+
+|
+java:S1450"_Remove the "enteredProjectId" field and declare it as a local variable in the relevant methods.(¯ô¿É8¼âæôœ/
+y
+java:S1450"\Remove the "enteredUserId" field and declare it as a local variable in the relevant methods.(‘¶·8¼âæôœ/
+u
+java:S1450"SRemove the "user" field and declare it as a local variable in the relevant methods.(’Ø¾ıÿÿÿÿ8×ÓÏ÷œ/
+9
+java:S1116"Remove this empty statement.(ÔéÌË8Ìâæôœ/
+U	java:S106""9Replace this use of System.out or System.err by a logger.(ışç8Ìâæôœ/
+U	java:S106)"9Replace this use of System.out or System.err by a logger.(ê¨—8Ìâæôœ/
+Z	java:S1060"9Replace this use of System.out or System.err by a logger.(üÿ‘æÿÿÿÿÿ8Ìâæôœ/
+U	java:S1066"9Replace this use of System.out or System.err by a logger.(€·ê‚8Ìâæôœ/
+U	java:S106="9Replace this use of System.out or System.err by a logger.(ê¨—8Ìâæôœ/
+Z	java:S106F"9Replace this use of System.out or System.err by a logger.(”´¦’úÿÿÿÿ8Ñ—²Š/

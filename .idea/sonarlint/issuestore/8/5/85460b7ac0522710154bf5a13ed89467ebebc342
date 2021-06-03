@@ -1,0 +1,10 @@
+
+D
+java:S3740"/Provide the parametrized type for this generic.(éÒ¼b
+u
+java:S1450"_Remove the "enteredProjectId" field and declare it as a local variable in the relevant methods.(¯ô¿É
+J
+java:S6212"/Declare this local variable with "var" instead.(µ³ê¼ùÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ˆ”Û›
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(ê¨—
+Z	java:S106'"9Replace this use of System.out or System.err by a logger.(ºÕüÕüÿÿÿÿ8ßæ«Š/

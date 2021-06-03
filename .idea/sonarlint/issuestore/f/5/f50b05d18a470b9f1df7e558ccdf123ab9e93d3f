@@ -1,0 +1,8 @@
+
+u
+java:S1450"_Remove the "enteredProjectId" field and declare it as a local variable in the relevant methods.(¯ô¿É
+J
+java:S6212"/Declare this local variable with "var" instead.(µ³ê¼ùÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(«¯¨
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(ê¨—
+U	java:S106-"9Replace this use of System.out or System.err by a logger.(‹üº¢8Ÿõ¬Š/

@@ -1,0 +1,12 @@
+
+D
+java:S3740"/Provide the parametrized type for this generic.(éÒ¼b
+g
+java:S1128"JRemove this unused import 'com.egorbarinov.tasktrackersystem.entity.User'.(İ–ø8¾©Œôœ/
+z
+java:S1450"]Remove the "enteredUTaskId" field and declare it as a local variable in the relevant methods.(ş¹şá8ô¯Šôœ/
+Q
+java:S6212"/Declare this local variable with "var" instead.(µ³ê¼ùÿÿÿÿ8…Ğˆôœ/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(•»ğÑ8…Ğˆôœ/
+U	java:S106""9Replace this use of System.out or System.err by a logger.(ê¨—8¸´–ôœ/
+U	java:S106."9Replace this use of System.out or System.err by a logger.(‹üº¢8˜´Š/

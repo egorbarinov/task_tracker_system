@@ -1,0 +1,10 @@
+
+K
+java:S3740"/Provide the parametrized type for this generic.(éÒ¼b8‘ÚÎçœ/
+p
+java:S1450"SRemove the "task" field and declare it as a local variable in the relevant methods.(³´Û¸8›ËÑçœ/
+Q
+java:S6212"/Declare this local variable with "var" instead.(µ³ê¼ùÿÿÿÿ8 ÚÎçœ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(úªĞ¿şÿÿÿÿ8 ÚÎçœ/
+U	java:S106 "9Replace this use of System.out or System.err by a logger.(ê¨—8 ÚÎçœ/
+U	java:S106("9Replace this use of System.out or System.err by a logger.(ı‚±Õ8¬„³Š/

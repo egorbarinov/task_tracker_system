@@ -1,0 +1,17 @@
+
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(×²É8‹‰Œ/
+L
+java:S6212"/Declare this local variable with "var" instead.(áÅ“ó8‹‰Œ/
+Q
+java:S6212"/Declare this local variable with "var" instead.(ë€Æ¥úÿÿÿÿ8›‰Œ/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(€‚¸«8›‰Œ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(·¥¹ˆÿÿÿÿÿ8›‰Œ/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(›¬Û­8›‰Œ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¬Ÿ÷Ôıÿÿÿÿ8›‰Œ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(‘ù‘Áÿÿÿÿÿ8›‰Œ/
+Z	java:S106,"9Replace this use of System.out or System.err by a logger.(Åî’¤ùÿÿÿÿ8›‰Œ/
+‰
+java:S11301"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(œû¿Ø8›‰Œ/
+L
+java:S62122"/Declare this local variable with "var" instead.(ŸÀÙ¹8›‰Œ/

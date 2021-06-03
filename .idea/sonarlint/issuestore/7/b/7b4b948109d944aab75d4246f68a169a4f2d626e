@@ -1,0 +1,15 @@
+
+u
+java:S1450"_Remove the "enteredProjectId" field and declare it as a local variable in the relevant methods.(¯ô¿É
+r
+java:S1450"\Remove the "enteredTaskId" field and declare it as a local variable in the relevant methods.(­ğº¬
+i
+java:S1450"SRemove the "task" field and declare it as a local variable in the relevant methods.(³´Û¸
+2
+java:S1116"Remove this empty statement.(ÔéÌË
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(‡½Ë‘ÿÿÿÿÿ
+N	java:S106("9Replace this use of System.out or System.err by a logger.(ê¨—
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(üÿ‘æÿÿÿÿÿ
+N	java:S1066"9Replace this use of System.out or System.err by a logger.(ß›²Ú
+N	java:S106="9Replace this use of System.out or System.err by a logger.(ê¨—
+Z	java:S106F"9Replace this use of System.out or System.err by a logger.(”´¦’úÿÿÿÿ8Ù¡°Š/
