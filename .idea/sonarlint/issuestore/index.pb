@@ -43,8 +43,6 @@ bsrc/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteU
 Tsrc/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/CreateTask.java,b\6\b6c2c354f1b5a0e1ec51eb25500d0d137bba22d8
 „
 Tsrc/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/CreateUser.java,c\c\ccd0a5b587e3e8ada11a08ba79e20c1a5ae7eacf
-p
-@src/main/java/com/egorbarinov/tasktrackersystem/entity/User.java,a\5\a587dd74558186abc18a38cb24285bd55bc98bf4
 J
 init_db_for_postgresql.sql,c\3\c33042595ecb2895946052aa7f93ef695d544745
 ƒ
@@ -59,12 +57,6 @@ Vsrc/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/FindUserBy
 Ksrc/main/java/com/egorbarinov/tasktrackersystem/command/CommandStorage.java,c\8\c8dd28c83c3e56e47c33604a304526238cbf079c
 l
 <src/main/java/com/egorbarinov/tasktrackersystem/Console.java,8\7\873df9e619ed8022354fac028497a19b0e78a777
-B
-init_db_for_h2.sql,8\6\86681ffab3b1976ecb546b2417254a93003c2d2d
-p
-@src/main/java/com/egorbarinov/tasktrackersystem/entity/Task.java,d\c\dc81974b89c5a1b60ec75b65fcdaea4873f5c3a5
-s
-Csrc/main/java/com/egorbarinov/tasktrackersystem/entity/Project.java,e\a\eae3ee1faeddefc5156823acf2cc10de081c2c23
 |
 Lsrc/main/java/com/egorbarinov/tasktrackersystem/service/TaskServiceImpl.java,9\c\9c7904d6924166948c14974d7ac471cc4ab62adc
 

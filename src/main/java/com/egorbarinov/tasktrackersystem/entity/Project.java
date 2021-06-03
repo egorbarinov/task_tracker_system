@@ -26,14 +26,14 @@ public class Project {
     @Column
     private String name;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinTable(schema = "task_tracker_system", name = "projects_users",
             joinColumns = @JoinColumn(name = "projects_id"),
             inverseJoinColumns = @JoinColumn(name = "users_id"))
     @Fetch(value = FetchMode.SUBSELECT)
     private List<User> users;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinTable(schema = "task_tracker_system", name = "projects_tasks",
             joinColumns = @JoinColumn(name = "projects_id"),
             inverseJoinColumns = @JoinColumn(name = "tasks_id"))
