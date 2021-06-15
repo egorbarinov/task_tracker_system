@@ -3,36 +3,39 @@ package com.egorbarinov.tasktrackersystem.command.usercommands;
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Task;
 import com.egorbarinov.tasktrackersystem.entity.User;
-import com.egorbarinov.tasktrackersystem.service.Service;
-import com.egorbarinov.tasktrackersystem.service.TaskServiceImpl;
-import com.egorbarinov.tasktrackersystem.service.UserServiceImpl;
+import com.egorbarinov.tasktrackersystem.repository.TaskRepository;
+import com.egorbarinov.tasktrackersystem.repository.UserRepository;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class AddTaskToUser implements Command {
-    private Service taskService;
-    private Service userService;
-    private BufferedReader reader;
+    private final TaskRepository<Task> taskRepository;
+    private final UserRepository<User> userRepository;
+    private final BufferedReader reader;
     private User user;
-    private String enteredUserId;
     private Long userId;
-    private String enteredTaskId;
     private Long taskId;
     boolean lock = true;
 
     public AddTaskToUser() {
-        this.taskService = new TaskServiceImpl();
-        this.userService = new UserServiceImpl();
+        this.taskRepository = new TaskRepository<>(Task.class);
+        this.userRepository = new UserRepository<>(User.class);
         this.reader = new BufferedReader(new InputStreamReader(System.in));
+    }
+
+    @Override
+    public void execute() {
+        findUserById();
+        addTaskToUser();
     }
 
     private User findUserById() {
         while (lock) {
             System.out.println("для добавления задачи в проект введите id пользователя: ");
             try {
-                enteredUserId = reader.readLine();
+                String enteredUserId = reader.readLine();
                 userId = Long.parseLong(enteredUserId);
                 if (userId != 0) lock = false;
             }
@@ -43,7 +46,7 @@ public class AddTaskToUser implements Command {
                 e.printStackTrace();
             }
         }
-        user = (User) userService.findById(userId);
+        user = userRepository.findById(userId);
         System.out.println(user.toString());
         lock = true;
         return user;
@@ -53,7 +56,7 @@ public class AddTaskToUser implements Command {
         while (lock) {
             System.out.println("Введите id назначенной пользователю задачи: ");
             try {
-                enteredTaskId = reader.readLine();
+                String enteredTaskId = reader.readLine();
                 taskId = Long.parseLong(enteredTaskId);
                 if (taskId != 0) lock = false;
             }
@@ -66,17 +69,12 @@ public class AddTaskToUser implements Command {
         }
         Task task = getTaskById(taskId);
         this.user.getTasks().add(task);
-        userService.save(user);
+        userRepository.save(user);
         System.out.println("Задача добавлена пользователю: " + user.getName());
     }
 
     private Task getTaskById(Long taskId) {
-        return (Task) taskService.findById(taskId);
+        return taskRepository.findById(taskId);
     }
 
-    @Override
-    public void execute() {
-        findUserById();
-        addTaskToUser();
-    }
 }

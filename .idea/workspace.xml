@@ -4,19 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77c7d017-72c3-4611-8b29-64cda8c8091c" name="Default Changelist" comment="fixed the error">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/48e603c6c1e89f5ee8a06df2c5e16ad8aed261bd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/873df9e619ed8022354fac028497a19b0e78a777" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8c81e08a7aacce972ddacf2a299e60562d8b9a9e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8fbd52e79a33105105c4c1019016ff63af95bab3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c7904d6924166948c14974d7ac471cc4ab62adc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b3f0dad4c2417043d6ac763de4003b79d0643f2b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c8dd28c83c3e56e47c33604a304526238cbf079c" beforeDir="false" />
+    <list default="true" id="77c7d017-72c3-4611-8b29-64cda8c8091c" name="Default Changelist" comment="refactoring a Console class">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f320f3ee2fcd09f063b21a2efc59218406ea21e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/477515d36b317eb093d7f088b13d925ef073887b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/574574a2fc5a0c6adbbe69e4c5a7dfe44cf0ad53" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5bdedbf0172fb25858fcb6c12e1ad77d32eafcce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/6114675e13dd3a9a5f2b9c70704fec2149a22a80" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/61da8cc675ee3cb0331cfd216935f6d7523ef0e6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/724259202550cff038922de98b66f53ce977974f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7b4b948109d944aab75d4246f68a169a4f2d626e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c28c7ed0fec74f42685e880924ad440536107d6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/5/85460b7ac0522710154bf5a13ed89467ebebc342" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/5/85fdea44a780c75f63fdfad792310568df5f40aa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/944005ce3e56a92b3f49ca16bb267eb732f98271" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9ecb82745ab6ed2d519a752e5c8622bc0eb14352" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/abdcd0b24d87854e84aedb7a8e5c0199f8414eed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6c2c354f1b5a0e1ec51eb25500d0d137bba22d8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd2cba68ce81eded123176301af8b8573dfce959" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/cabed8cc1fda65f628d867bc556654c44c20dac0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/ccd0a5b587e3e8ada11a08ba79e20c1a5ae7eacf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f0a0849e85477682a4f382fc12d7e99f43e8ee26" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f21830a7082ed0f5d79e41f976f50eec1f34b174" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f50b05d18a470b9f1df7e558ccdf123ab9e93d3f" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/CommandStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/CommandStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddTaskToProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddTaskToProject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddUserToProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddUserToProject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/CreateProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/CreateProject.java" afterDir="false" />
@@ -35,7 +47,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/FindUserById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/FindUserById.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/ShowUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/ShowUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/repository/RepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/repository/RepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/service/ProjectServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/service/Service.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/service/TaskServiceImpl.java" beforeDir="false" />
@@ -54,6 +66,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1tO15jOdYzGGyu9hUsnnevZopUk" />
@@ -151,7 +168,7 @@
       <workItem from="1622749077661" duration="1988000" />
       <workItem from="1622877850394" duration="8000" />
       <workItem from="1623404320886" duration="218000" />
-      <workItem from="1623737576430" duration="607000" />
+      <workItem from="1623737576430" duration="3503000" />
     </task>
     <task id="LOCAL-00001" summary="fixed the error">
       <created>1622750905783</created>
@@ -160,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622750905783</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactoring a Console class">
+      <created>1623738420704</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623738420704</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +204,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed the error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the error" />
+    <MESSAGE value="refactoring a Console class" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring a Console class" />
   </component>
 </project>

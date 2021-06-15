@@ -1,22 +1,26 @@
 package com.egorbarinov.tasktrackersystem.command.taskcommands;
 
 import com.egorbarinov.tasktrackersystem.command.Command;
-import com.egorbarinov.tasktrackersystem.service.Service;
-import com.egorbarinov.tasktrackersystem.service.TaskServiceImpl;
+import com.egorbarinov.tasktrackersystem.entity.Task;
+import com.egorbarinov.tasktrackersystem.repository.TaskRepository;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class DeleteTask implements Command {
-    private Service taskService;
-    private BufferedReader reader;
-    private String enteredTaskId;
+    private final TaskRepository<Task> taskRepository;
+    private final BufferedReader reader;
     private Long taskId;
 
     public DeleteTask() {
-        this.taskService = new TaskServiceImpl();
+        this.taskRepository = new TaskRepository<>(Task.class);
         this.reader = new BufferedReader(new InputStreamReader(System.in));;;
+    }
+
+    @Override
+    public void execute() {
+        deleteById();
     }
 
     private void deleteById() {
@@ -24,7 +28,7 @@ public class DeleteTask implements Command {
         while (lock) {
             System.out.println("Введите id задачи, которую следует удалить: ");
             try {
-                enteredTaskId = reader.readLine();
+                String enteredTaskId = reader.readLine();
                 taskId = Long.parseLong(enteredTaskId);
                 if (taskId != 0) lock = false;
             }
@@ -35,12 +39,8 @@ public class DeleteTask implements Command {
                 e.printStackTrace();
             }
         }
-        taskService.deleteById(taskId);
+        taskRepository.deleteById(taskId);
         System.out.println("Задача удалена");
     }
 
-    @Override
-    public void execute() {
-        deleteById();
-    }
 }

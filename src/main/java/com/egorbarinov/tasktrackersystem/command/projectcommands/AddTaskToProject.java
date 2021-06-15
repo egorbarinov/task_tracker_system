@@ -3,36 +3,40 @@ package com.egorbarinov.tasktrackersystem.command.projectcommands;
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Project;
 import com.egorbarinov.tasktrackersystem.entity.Task;
-import com.egorbarinov.tasktrackersystem.service.ProjectServiceImpl;
-import com.egorbarinov.tasktrackersystem.service.TaskServiceImpl;
+import com.egorbarinov.tasktrackersystem.repository.ProjectRepository;
+import com.egorbarinov.tasktrackersystem.repository.TaskRepository;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class AddTaskToProject implements Command {
-    private ProjectServiceImpl projectService;
-    private TaskServiceImpl taskService;
-    private BufferedReader reader;
+    private final TaskRepository<Task> taskRepository;
+    private final ProjectRepository<Project> projectRepository;
+
+    private final BufferedReader reader;
     private Project project;
-    private Task task;
-    private String enteredTaskId;
     private Long taskId;
-    private String enteredProjectId;
     private Long projectId;
     private boolean lock = true;
 
     public AddTaskToProject() {
-        this.projectService = new ProjectServiceImpl();
-        this.taskService = new TaskServiceImpl();
-        this.reader = new BufferedReader(new InputStreamReader(System.in));;
+        this.projectRepository = new ProjectRepository<>(Project.class);
+        this.taskRepository = new TaskRepository<>(Task.class);
+        this.reader = new BufferedReader(new InputStreamReader(System.in));
     }
 
-    private Project findProjectById() {
+    @Override
+    public void execute() {
+        findProjectById();
+        addTaskToProject();
+    }
+
+    private void findProjectById() {
         while (lock) {
             System.out.println("введите id проекта, в который требуется добавить задачу: ");
             try {
-                enteredProjectId = reader.readLine();
+                String enteredProjectId = reader.readLine();
                 projectId = Long.parseLong(enteredProjectId);
                 if (projectId != 0) lock = false;
             }
@@ -43,17 +47,16 @@ public class AddTaskToProject implements Command {
                 e.printStackTrace();
             }
         }
-        this.project = projectService.findById(projectId);
+        this.project = projectRepository.findById(projectId);
         System.out.println(project.toString());
         lock = true;
-        return project;
     }
 
     private void addTaskToProject() {
         while (lock) {
             System.out.println("Введите id добавляемой в проект задачи: ");
             try {
-                enteredTaskId = reader.readLine();
+                String enteredTaskId = reader.readLine();
                 taskId = Long.parseLong(enteredTaskId);
                 if (taskId != 0) lock = false;
             }
@@ -64,20 +67,15 @@ public class AddTaskToProject implements Command {
                 e.printStackTrace();
             }
         }
-        this.task = getTaskById(taskId);
+        Task task = getTaskById(taskId);
         this.project.getTasks().add(task);
-        projectService.save(project);
+        projectRepository.save(project);
         System.out.println("Изменения сохранены.");
 
     }
 
     private Task getTaskById(Long taskId) {
-        return taskService.findById(taskId);
+        return taskRepository.findById(taskId);
     }
 
-    @Override
-    public void execute() {
-        findProjectById();
-        addTaskToProject();
-    }
 }

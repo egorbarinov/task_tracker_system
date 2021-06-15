@@ -2,22 +2,25 @@ package com.egorbarinov.tasktrackersystem.command.taskcommands;
 
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Task;
-import com.egorbarinov.tasktrackersystem.service.Service;
-import com.egorbarinov.tasktrackersystem.service.TaskServiceImpl;
+import com.egorbarinov.tasktrackersystem.repository.TaskRepository;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class CreateTask implements Command {
-    private Service service;
-    private Task task;
-    private BufferedReader reader;
+    private final TaskRepository<Task> taskRepository;
+    private final BufferedReader reader;
     private String name;
 
     public CreateTask() {
-        this.service = new TaskServiceImpl();
+        this.taskRepository = new TaskRepository<>(Task.class);
         reader = new BufferedReader(new InputStreamReader(System.in));
+    }
+
+    @Override
+    public void execute() {
+        addProject();
     }
 
     private void addProject() {
@@ -35,14 +38,9 @@ public class CreateTask implements Command {
                 e.printStackTrace();
             }
         }
-        this.task = new Task(name);
-        service.save(task);
+        Task task = new Task(name);
+        taskRepository.save(task);
         System.out.println("Задача создана: " + name);
-    }
-
-    @Override
-    public void execute() {
-        addProject();
     }
 
 }

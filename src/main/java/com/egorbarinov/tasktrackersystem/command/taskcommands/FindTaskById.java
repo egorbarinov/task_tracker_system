@@ -2,22 +2,25 @@ package com.egorbarinov.tasktrackersystem.command.taskcommands;
 
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Task;
-import com.egorbarinov.tasktrackersystem.service.Service;
-import com.egorbarinov.tasktrackersystem.service.TaskServiceImpl;
+import com.egorbarinov.tasktrackersystem.repository.TaskRepository;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class FindTaskById implements Command {
-    private Service service;
-    private BufferedReader reader;
-    private String enteredUTaskId;
+    private final TaskRepository<Task> taskRepository;
+    private final BufferedReader reader;
     private Long taskId;
 
     public FindTaskById() {
-        this.service = new TaskServiceImpl();
+        this.taskRepository = new TaskRepository<>(Task.class);
         this.reader = new BufferedReader(new InputStreamReader(System.in));
+    }
+
+    @Override
+    public void execute() {
+        System.out.println(findById());
     }
 
     private Task findById() {
@@ -25,7 +28,7 @@ public class FindTaskById implements Command {
         while (lock) {
             System.out.println("Введите id задачи: ");
             try {
-                enteredUTaskId = reader.readLine();
+                String enteredUTaskId = reader.readLine();
                 taskId = Long.parseLong(enteredUTaskId);
                 if (taskId != 0) lock = false;
             }
@@ -36,12 +39,8 @@ public class FindTaskById implements Command {
                 e.printStackTrace();
             }
         }
-        return (Task) service.findById(taskId);
+        return taskRepository.findById(taskId);
 
     }
 
-    @Override
-    public void execute() {
-        System.out.println(findById());
-    }
 }

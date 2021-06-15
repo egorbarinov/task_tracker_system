@@ -3,36 +3,33 @@ package com.egorbarinov.tasktrackersystem.command.projectcommands;
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Project;
 import com.egorbarinov.tasktrackersystem.entity.User;
-import com.egorbarinov.tasktrackersystem.service.ProjectServiceImpl;
-import com.egorbarinov.tasktrackersystem.service.UserServiceImpl;
+import com.egorbarinov.tasktrackersystem.repository.ProjectRepository;
+import com.egorbarinov.tasktrackersystem.repository.UserRepository;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class AddUserToProject implements Command {
-    private ProjectServiceImpl projectService;
-    private UserServiceImpl userService;
+    private final ProjectRepository<Project> projectRepository;
+    private final UserRepository<User> userRepository;
     private Project project;
-    private User user;
-    private BufferedReader reader;
-    private String enteredUserId;
+    private final BufferedReader reader;
     private Long userId;
-    private String enteredProjectId;
     private Long projectId;
     private boolean lock = true;
 
     public AddUserToProject() {
-        this.projectService = new ProjectServiceImpl();
-        this.userService = new UserServiceImpl();
+        this.projectRepository = new ProjectRepository<>(Project.class);
+        this.userRepository = new UserRepository<>(User.class);
         reader = new BufferedReader(new InputStreamReader(System.in));
     }
 
-    private Project findProjectById() {
+    private void findProjectById() {
         while (lock) {
             System.out.println("для добавления пользователя в проект введите id проекта: ");
             try {
-                enteredProjectId = reader.readLine();
+                String enteredProjectId = reader.readLine();
                 projectId = Long.parseLong(enteredProjectId);
                 if (projectId != 0) lock = false;
             }
@@ -43,17 +40,16 @@ public class AddUserToProject implements Command {
                 e.printStackTrace();
             }
         }
-        project = projectService.findById(projectId);
+        project = projectRepository.findById(projectId);
         System.out.println(project.toString());
         lock = true;
-        return project;
     }
 
     private void addUserToProject() {
         while (lock) {
             System.out.println("Введите id добавляемого в проект пользователя: ");
             try {
-                enteredUserId = reader.readLine();
+                String enteredUserId = reader.readLine();
                 userId = Long.parseLong(enteredUserId);
                 if (userId != 0) lock = false;
             }
@@ -64,15 +60,15 @@ public class AddUserToProject implements Command {
                 e.printStackTrace();
             }
         }
-        this.user = getUserById(userId);
+        User user = getUserById(userId);
         this.project.getUsers().add(user);
-        projectService.save(project);
+        projectRepository.save(project);
         System.out.println("Изменения сохранены.");
 
     }
 
     private User getUserById(Long userid) {
-        return userService.findById(userid);
+        return userRepository.findById(userid);
     }
 
     @Override

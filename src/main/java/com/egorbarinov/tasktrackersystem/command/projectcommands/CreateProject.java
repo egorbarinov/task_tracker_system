@@ -2,22 +2,25 @@ package com.egorbarinov.tasktrackersystem.command.projectcommands;
 
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Project;
-import com.egorbarinov.tasktrackersystem.service.ProjectServiceImpl;
-import com.egorbarinov.tasktrackersystem.service.Service;
+import com.egorbarinov.tasktrackersystem.repository.ProjectRepository;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class CreateProject implements Command {
-    private Service service;
-    private Project project;
-    private BufferedReader reader;
+    private final ProjectRepository<Project> projectRepository;
+    private final BufferedReader reader;
     private String name;
 
     public CreateProject() {
-        this.service = new ProjectServiceImpl();
+        this.projectRepository = new ProjectRepository<>(Project.class);
         reader = new BufferedReader(new InputStreamReader(System.in));
+    }
+
+    @Override
+    public void execute() {
+        addProject();
     }
 
     private void addProject() {
@@ -36,13 +39,9 @@ public class CreateProject implements Command {
                 e.printStackTrace();
             }
         }
-        this.project = new Project(name);
-        service.save(project);
+        Project project = new Project(name);
+        projectRepository.save(project);
         System.out.println("Проект добавлен: " + name);
     }
 
-    @Override
-    public void execute() {
-        addProject();
-    }
 }

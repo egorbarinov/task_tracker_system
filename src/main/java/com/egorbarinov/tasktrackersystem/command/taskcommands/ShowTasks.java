@@ -2,25 +2,24 @@ package com.egorbarinov.tasktrackersystem.command.taskcommands;
 
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Task;
-import com.egorbarinov.tasktrackersystem.service.Service;
-import com.egorbarinov.tasktrackersystem.service.TaskServiceImpl;
+import com.egorbarinov.tasktrackersystem.repository.TaskRepository;
 
 import java.util.List;
 
 public class ShowTasks implements Command {
-    private Service service;
+    private final TaskRepository<Task> taskRepository;
 
     public ShowTasks() {
-        this.service = new TaskServiceImpl();
-    }
-
-    private List<Task> showTasks() {
-        return service.findAll();
-
+        this.taskRepository = new TaskRepository<>(Task.class);
     }
 
     @Override
     public void execute() {
         showTasks().forEach(System.out::println);
     }
+
+    private List<Task> showTasks() {
+        return taskRepository.findAll();
+    }
+
 }

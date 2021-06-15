@@ -9,7 +9,7 @@ import java.util.List;
 
 public abstract class RepositoryImpl<T, ID extends Serializable> implements Repository<T, ID> {
 
-    private static SessionFactory factory = new Configuration()
+    private static final SessionFactory FACTORY = new Configuration()
             .configure("configs/hibernate.cfg.xml")
             .buildSessionFactory();;
 
@@ -17,14 +17,11 @@ public abstract class RepositoryImpl<T, ID extends Serializable> implements Repo
 
     public RepositoryImpl(Class<T> typeClass) {
         this.typeClass = typeClass;
-//        this.factory = new Configuration()
-//                .configure("configs/hibernate.cfg.xml")
-//                .buildSessionFactory();
     }
 
     @Override
     public T findById(ID id) {
-        Session session = factory.getCurrentSession();
+        Session session = FACTORY.getCurrentSession();
         try {
             session.beginTransaction();
             final T object = session.get(typeClass, id);
@@ -38,7 +35,7 @@ public abstract class RepositoryImpl<T, ID extends Serializable> implements Repo
 
     @Override
     public void save(T entity) {
-        try (Session session = factory.getCurrentSession()) {
+        try (Session session = FACTORY.getCurrentSession()) {
             session.getTransaction().begin();
             session.saveOrUpdate(entity);
             session.getTransaction().commit();
@@ -49,7 +46,7 @@ public abstract class RepositoryImpl<T, ID extends Serializable> implements Repo
 
     @Override
     public void update(T entity) {
-        try (Session session = factory.getCurrentSession()) {
+        try (Session session = FACTORY.getCurrentSession()) {
             session.getTransaction().begin();
             session.merge(entity);
             session.getTransaction().commit();
@@ -60,7 +57,7 @@ public abstract class RepositoryImpl<T, ID extends Serializable> implements Repo
 
     @Override
     public void delete(T entity) {
-        try (Session session = factory.getCurrentSession();) {
+        try (Session session = FACTORY.getCurrentSession();) {
             session.getTransaction().begin();
             session.delete(entity);
             session.getTransaction().commit();
@@ -71,7 +68,7 @@ public abstract class RepositoryImpl<T, ID extends Serializable> implements Repo
 
     @Override
     public void deleteById(ID id) {
-        try (Session session = factory.getCurrentSession()) {
+        try (Session session = FACTORY.getCurrentSession()) {
             session.getTransaction().begin();
             session.delete(session.get(typeClass, id));
             session.getTransaction().commit();
@@ -83,7 +80,7 @@ public abstract class RepositoryImpl<T, ID extends Serializable> implements Repo
 
     public List<T> findAll() {
         List<T> entities = null;
-        try (Session session = factory.getCurrentSession()) {
+        try (Session session = FACTORY.getCurrentSession()) {
             session.getTransaction().begin();
             entities = session.createQuery("from " + typeClass.getSimpleName(), typeClass).getResultList();
             session.getTransaction().commit();

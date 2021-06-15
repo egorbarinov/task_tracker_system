@@ -3,28 +3,33 @@ package com.egorbarinov.tasktrackersystem.command.usercommands;
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Task;
 import com.egorbarinov.tasktrackersystem.entity.User;
-import com.egorbarinov.tasktrackersystem.service.TaskServiceImpl;
-import com.egorbarinov.tasktrackersystem.service.UserServiceImpl;
+import com.egorbarinov.tasktrackersystem.repository.TaskRepository;
+import com.egorbarinov.tasktrackersystem.repository.UserRepository;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class DeleteTaskFromUser implements Command {
-    private TaskServiceImpl taskService;
-    private UserServiceImpl userService;
+    private final TaskRepository<Task> taskRepository;
+    private final UserRepository<User> userRepository;
     private User user;
-    private BufferedReader reader;
+    private final BufferedReader reader;
     private String enteredUserId;
     private Long userid;
-    private String enteredTaskId;
     private Long taskId;
     private boolean lock = true;
 
     public DeleteTaskFromUser() {
-        this.taskService = new TaskServiceImpl();
-        this.userService = new UserServiceImpl();
+        this.taskRepository = new TaskRepository<>(Task.class);
+        this.userRepository = new UserRepository<>(User.class);
         this.reader = new BufferedReader(new InputStreamReader(System.in));;;
+    }
+
+    @Override
+    public void execute() {
+        findUserById();
+        deleteTaskFromUser();
     }
 
     private void findUserById() {
@@ -42,7 +47,7 @@ public class DeleteTaskFromUser implements Command {
                 e.printStackTrace();
             }
         }
-        this.user = userService.findById(userid);
+        this.user = userRepository.findById(userid);
         lock = true;
     }
 
@@ -50,7 +55,7 @@ public class DeleteTaskFromUser implements Command {
         while (lock) {
             System.out.println("Введите id удаляемого пользователя из проекта: ");
             try {
-                enteredTaskId = reader.readLine();
+                String enteredTaskId = reader.readLine();
                 taskId = Long.parseLong(enteredUserId);
                 if (taskId != 0) lock = false;
             }
@@ -61,16 +66,11 @@ public class DeleteTaskFromUser implements Command {
                 e.printStackTrace();
             }
         }
-        Task task = taskService.findById(taskId);
+        Task task = taskRepository.findById(taskId);
         this.user.getTasks().remove(task);
-        userService.update(user);
+        userRepository.update(user);
         System.out.println("Изменения сохранены.");
 
     }
 
-    @Override
-    public void execute() {
-        findUserById();
-        deleteTaskFromUser();
-    }
 }

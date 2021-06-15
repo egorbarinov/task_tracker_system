@@ -1,22 +1,26 @@
 package com.egorbarinov.tasktrackersystem.command.projectcommands;
 
 import com.egorbarinov.tasktrackersystem.command.Command;
-import com.egorbarinov.tasktrackersystem.service.ProjectServiceImpl;
-import com.egorbarinov.tasktrackersystem.service.Service;
+import com.egorbarinov.tasktrackersystem.entity.Project;
+import com.egorbarinov.tasktrackersystem.repository.ProjectRepository;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class DeleteProject implements Command {
-    private Service service;
-    private BufferedReader reader;
-    private String enteredProjectId;
+    private final ProjectRepository<Project> projectRepository;
+    private final BufferedReader reader;
     private Long projectId;
 
     public DeleteProject() {
-        this.service = new ProjectServiceImpl();
+        this.projectRepository = new ProjectRepository<>(Project.class);
         this.reader = new BufferedReader(new InputStreamReader(System.in));
+    }
+
+    @Override
+    public void execute() {
+        deleteById();
     }
 
     private void deleteById() {
@@ -24,7 +28,7 @@ public class DeleteProject implements Command {
         while (lock) {
             System.out.println("Введите id поекта, который следует удалить: ");
             try {
-                enteredProjectId = reader.readLine();
+                String enteredProjectId = reader.readLine();
                 projectId = Long.parseLong(enteredProjectId);
                 if (projectId != 0) lock = false;
             }
@@ -35,12 +39,8 @@ public class DeleteProject implements Command {
                 e.printStackTrace();
             }
         }
-        service.deleteById(projectId);
+        projectRepository.deleteById(projectId);
         System.out.println("Проект удален");
     }
 
-    @Override
-    public void execute() {
-        deleteById();
-    }
 }

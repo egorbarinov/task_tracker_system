@@ -2,24 +2,24 @@ package com.egorbarinov.tasktrackersystem.command.usercommands;
 
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.User;
-import com.egorbarinov.tasktrackersystem.service.Service;
-import com.egorbarinov.tasktrackersystem.service.UserServiceImpl;
+import com.egorbarinov.tasktrackersystem.repository.UserRepository;
 
 import java.util.List;
 
 public class ShowUsers implements Command {
-    private Service service;
+    private final UserRepository<User> userRepository;
 
     public ShowUsers() {
-        this.service = new UserServiceImpl();
-    }
-
-    private List<User> showUsers() {
-        return service.findAll();
+        this.userRepository = new UserRepository<>(User.class);
     }
 
     @Override
     public void execute() {
         showUsers().forEach(System.out::println);
     }
+
+    private List<User> showUsers() {
+        return userRepository.findAll();
+    }
+
 }

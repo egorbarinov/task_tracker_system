@@ -2,22 +2,25 @@ package com.egorbarinov.tasktrackersystem.command.usercommands;
 
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.User;
-import com.egorbarinov.tasktrackersystem.service.Service;
-import com.egorbarinov.tasktrackersystem.service.UserServiceImpl;
+import com.egorbarinov.tasktrackersystem.repository.UserRepository;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class CreateUser implements Command {
-    private Service service;
-    private User user;
-    private BufferedReader reader;
+    private final UserRepository<User> userRepository;
+    private final BufferedReader reader;
     private String name;
 
     public CreateUser() {
-        this.service = new UserServiceImpl();
+        this.userRepository = new UserRepository<>(User.class);
         this.reader = new BufferedReader(new InputStreamReader(System.in));
+    }
+
+    @Override
+    public void execute() {
+        addUser();
     }
 
     private void addUser() {
@@ -35,14 +38,9 @@ public class CreateUser implements Command {
                 e.printStackTrace();
             }
         }
-        this.user = new User(name);
-        service.save(user);
+        User user = new User(name);
+        userRepository.save(user);
         System.out.println("Пользователь добавлен: " + name);
     }
 
-
-    @Override
-    public void execute() {
-        addUser();
-    }
 }

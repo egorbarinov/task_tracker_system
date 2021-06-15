@@ -3,37 +3,41 @@ package com.egorbarinov.tasktrackersystem.command.projectcommands;
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Project;
 import com.egorbarinov.tasktrackersystem.entity.User;
-import com.egorbarinov.tasktrackersystem.service.ProjectServiceImpl;
-import com.egorbarinov.tasktrackersystem.service.UserServiceImpl;
+import com.egorbarinov.tasktrackersystem.repository.ProjectRepository;
+import com.egorbarinov.tasktrackersystem.repository.UserRepository;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class DeleteUserFromProject implements Command {
-    private ProjectServiceImpl projectService;
-    private UserServiceImpl userService;
+    private final ProjectRepository<Project> projectRepository;
+    private final UserRepository<User> userRepository;
     private Project project;
-    private User user;
-    private BufferedReader reader;
-    private String enteredProjectId;
+    private final BufferedReader reader;
     private Long projectId;
-    private String enteredUserId;
     private Long userid;
     private boolean lock = true;
 
 
     public DeleteUserFromProject() {
-        this.projectService = new ProjectServiceImpl();
-        this.userService = new UserServiceImpl();
-        this.reader = new BufferedReader(new InputStreamReader(System.in));;
+        this.projectRepository = new ProjectRepository<>(Project.class);
+        this.userRepository = new UserRepository<>(User.class);
+        this.reader = new BufferedReader(new InputStreamReader(System.in));
+    }
+
+    @Override
+    public void execute() {
+        findProjectById();
+        deleteUserFromProject();
     }
 
     private void findProjectById() {
         while (lock) {
             System.out.println("укажите id проекта, из которого следует удалить польователя: ");
             try {
-                enteredProjectId = reader.readLine();
+                String enteredProjectId = reader.readLine();
                 projectId = Long.parseLong(enteredProjectId);
                 if (projectId != 0) lock = false;
             }
@@ -44,7 +48,7 @@ public class DeleteUserFromProject implements Command {
                 e.printStackTrace();
             }
         }
-        project = projectService.findById(projectId);
+        project = projectRepository.findById(projectId);
         System.out.println(project.toString());
         lock = true;
     }
@@ -53,7 +57,7 @@ public class DeleteUserFromProject implements Command {
         while (lock) {
             System.out.println("Введите id удаляемого пользователя из проекта: ");
             try {
-                enteredUserId = reader.readLine();
+                String enteredUserId = reader.readLine();
                 userid = Long.parseLong(enteredUserId);
                 if (userid != 0) lock = false;
             }
@@ -64,17 +68,12 @@ public class DeleteUserFromProject implements Command {
                 e.printStackTrace();
             }
         }
-        this.user = userService.findById(userid);
+        User user = userRepository.findById(userid);
         this.project.getUsers().remove(user);
-        projectService.update(project);
+        projectRepository.update(project);
         System.out.println("Изменения сохранены.");
 
     }
 
-    @Override
-    public void execute() {
-        findProjectById();
-        deleteUserFromProject();
-    }
 }
 
