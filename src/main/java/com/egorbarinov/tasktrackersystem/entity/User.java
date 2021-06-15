@@ -22,7 +22,7 @@ public class User {
     @Column
     private String name;
 
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany(cascade = CascadeType.PERSIST, mappedBy = "users")
     private List<Project> projects;
 
     @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)

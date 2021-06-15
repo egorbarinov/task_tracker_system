@@ -1,6 +1,6 @@
 package com.egorbarinov.tasktrackersystem.command.projectcommands;
 
-import com.egorbarinov.tasktrackersystem.command.Executor;
+import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Project;
 import com.egorbarinov.tasktrackersystem.service.ProjectServiceImpl;
 
@@ -8,7 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class FindProjectById implements Executor {
+public class FindProjectById implements Command {
     private ProjectServiceImpl service;
     private BufferedReader reader;
     private String enteredProjectId;

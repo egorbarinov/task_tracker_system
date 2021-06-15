@@ -1,13 +1,13 @@
 package com.egorbarinov.tasktrackersystem.command.usercommands;
 
-import com.egorbarinov.tasktrackersystem.command.Executor;
+import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.User;
 import com.egorbarinov.tasktrackersystem.service.Service;
 import com.egorbarinov.tasktrackersystem.service.UserServiceImpl;
 
 import java.util.List;
 
-public class ShowUsers implements Executor {
+public class ShowUsers implements Command {
     private Service service;
 
     public ShowUsers() {

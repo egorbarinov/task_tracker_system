@@ -1,6 +1,6 @@
 package com.egorbarinov.tasktrackersystem.command.projectcommands;
 
-import com.egorbarinov.tasktrackersystem.command.Executor;
+import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.service.ProjectServiceImpl;
 import com.egorbarinov.tasktrackersystem.service.Service;
 
@@ -8,7 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class DeleteProject implements Executor {
+public class DeleteProject implements Command {
     private Service service;
     private BufferedReader reader;
     private String enteredProjectId;

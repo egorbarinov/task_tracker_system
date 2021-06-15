@@ -1,8 +1,7 @@
 package com.egorbarinov.tasktrackersystem.command.taskcommands;
 
-import com.egorbarinov.tasktrackersystem.command.Executor;
+import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Task;
-import com.egorbarinov.tasktrackersystem.entity.User;
 import com.egorbarinov.tasktrackersystem.service.Service;
 import com.egorbarinov.tasktrackersystem.service.TaskServiceImpl;
 
@@ -10,7 +9,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class FindTaskById implements Executor {
+public class FindTaskById implements Command {
     private Service service;
     private BufferedReader reader;
     private String enteredUTaskId;

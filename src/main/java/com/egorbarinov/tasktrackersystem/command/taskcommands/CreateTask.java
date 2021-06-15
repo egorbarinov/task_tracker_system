@@ -1,6 +1,6 @@
 package com.egorbarinov.tasktrackersystem.command.taskcommands;
 
-import com.egorbarinov.tasktrackersystem.command.Executor;
+import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Task;
 import com.egorbarinov.tasktrackersystem.service.Service;
 import com.egorbarinov.tasktrackersystem.service.TaskServiceImpl;
@@ -9,7 +9,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class CreateTask implements Executor {
+public class CreateTask implements Command {
     private Service service;
     private Task task;
     private BufferedReader reader;

@@ -1,6 +1,6 @@
 package com.egorbarinov.tasktrackersystem.command.taskcommands;
 
-import com.egorbarinov.tasktrackersystem.command.Executor;
+import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Task;
 import com.egorbarinov.tasktrackersystem.entity.User;
 import com.egorbarinov.tasktrackersystem.service.TaskServiceImpl;
@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ShowingAllTaskByUser implements Executor {
+public class ShowingAllTaskByUser implements Command {
     private UserServiceImpl userService;
     private TaskServiceImpl taskService;
     private BufferedReader reader;
