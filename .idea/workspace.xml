@@ -4,29 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77c7d017-72c3-4611-8b29-64cda8c8091c" name="Default Changelist" comment="refactoring the code: deleted the service layer">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db4786406709eefa30ff4e4ec2cc53fffe20974a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/CommandStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/CommandStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddTaskToProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddTaskToProjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddUserToProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddUserToProjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/CreateProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/CreateProjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteProjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteUserFromProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteUserFromProjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/FindProjectById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/FindProjectByIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/ShowProjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/ShowProjectsCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/CreateTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/CreateTaskCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/DeleteTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/DeleteTaskCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/FindTaskById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/FindTaskByIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/ShowTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/ShowTasksCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/ShowingAllTaskByUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/ShowingAllTaskByUserCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/AddTaskToUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/AddTaskToUserCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/CreateUserCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteTaskFromUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteTaskFromUserCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteUserCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/FindUserById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/FindUserByIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/ShowUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/ShowUsersCommand.java" afterDir="false" />
+    <list default="true" id="77c7d017-72c3-4611-8b29-64cda8c8091c" name="Default Changelist" comment="renamed the classes in the command package">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddTaskToProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddTaskToProjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddUserToProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddUserToProjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/CreateProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/CreateProjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteProjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteUserFromProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteUserFromProjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/FindProjectByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/FindProjectByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/ShowProjectsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/ShowProjectsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/CreateTaskCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/CreateTaskCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/DeleteTaskCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/DeleteTaskCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/FindTaskByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/FindTaskByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/ShowTasksCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/ShowTasksCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/ShowingAllTaskByUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/ShowingAllTaskByUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/AddTaskToUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/AddTaskToUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/CreateUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/CreateUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteTaskFromUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteTaskFromUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/FindUserByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/FindUserByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/ShowUsersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/ShowUsersCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +143,7 @@
       <workItem from="1622877850394" duration="8000" />
       <workItem from="1623404320886" duration="218000" />
       <workItem from="1623737576430" duration="3944000" />
-      <workItem from="1623742448086" duration="309000" />
+      <workItem from="1623742448086" duration="854000" />
     </task>
     <task id="LOCAL-00001" summary="fixed the error">
       <created>1622750905783</created>
@@ -169,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623741218106</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="renamed the classes in the command package">
+      <created>1623742933644</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1623742933644</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +195,7 @@
     <MESSAGE value="fixed the error" />
     <MESSAGE value="refactoring a Console class" />
     <MESSAGE value="refactoring the code: deleted the service layer" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring the code: deleted the service layer" />
+    <MESSAGE value="renamed the classes in the command package" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed the classes in the command package" />
   </component>
 </project>
