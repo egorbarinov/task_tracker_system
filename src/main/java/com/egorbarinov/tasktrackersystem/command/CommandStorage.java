@@ -4,13 +4,16 @@ import com.egorbarinov.tasktrackersystem.command.projectcommands.*;
 import com.egorbarinov.tasktrackersystem.command.taskcommands.*;
 import com.egorbarinov.tasktrackersystem.command.usercommands.*;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.HashMap;
 
 import java.util.Map;
 import java.util.Set;
 
 public class CommandStorage {
-
     private static final Map<String, Command> COMMANDS = new HashMap<>();
 
     public CommandStorage() {
@@ -42,9 +45,10 @@ public class CommandStorage {
         return COMMANDS.keySet();
     }
 
-    public void executeCommand(String command) {
+    public void executeCommand(String command) throws IOException {
         COMMANDS.get(command).execute();
     }
+
     public boolean isCommandExist(String command) {
         return COMMANDS.containsKey(command);
     }
