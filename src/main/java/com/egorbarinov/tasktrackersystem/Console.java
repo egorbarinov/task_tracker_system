@@ -5,8 +5,6 @@ import com.egorbarinov.tasktrackersystem.command.CommandStorage;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
 public class Console {
 
