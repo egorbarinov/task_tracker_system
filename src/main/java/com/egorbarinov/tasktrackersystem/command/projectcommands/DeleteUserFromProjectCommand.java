@@ -20,11 +20,10 @@ public class DeleteUserFromProjectCommand implements Command {
     private Long userid;
     private boolean lock = true;
 
-
-    public DeleteUserFromProjectCommand() {
+    public DeleteUserFromProjectCommand(BufferedReader reader) {
         this.projectRepository = new ProjectRepository<>(Project.class);
         this.userRepository = new UserRepository<>(User.class);
-        this.reader = new BufferedReader(new InputStreamReader(System.in));
+        this.reader = reader;
     }
 
     @Override

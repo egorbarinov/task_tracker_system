@@ -12,10 +12,9 @@ public class FindTaskByIdCommand implements Command {
     private final TaskRepository<Task> taskRepository;
     private final BufferedReader reader;
     private Long taskId;
-
-    public FindTaskByIdCommand() {
+    public FindTaskByIdCommand(BufferedReader reader) {
         this.taskRepository = new TaskRepository<>(Task.class);
-        this.reader = new BufferedReader(new InputStreamReader(System.in));
+        this.reader = reader;
     }
 
     @Override

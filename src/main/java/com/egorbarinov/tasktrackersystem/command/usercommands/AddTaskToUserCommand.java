@@ -18,11 +18,10 @@ public class AddTaskToUserCommand implements Command {
     private Long userId;
     private Long taskId;
     boolean lock = true;
-
-    public AddTaskToUserCommand() {
+    public AddTaskToUserCommand(BufferedReader reader) {
         this.taskRepository = new TaskRepository<>(Task.class);
         this.userRepository = new UserRepository<>(User.class);
-        this.reader = new BufferedReader(new InputStreamReader(System.in));
+        this.reader = reader;
     }
 
     @Override

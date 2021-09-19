@@ -1,5 +1,7 @@
 package com.egorbarinov.tasktrackersystem.command.taskcommands;
 
+
+
 import com.egorbarinov.tasktrackersystem.command.Command;
 import com.egorbarinov.tasktrackersystem.entity.Task;
 import com.egorbarinov.tasktrackersystem.repository.TaskRepository;
@@ -13,9 +15,9 @@ public class DeleteTaskCommand implements Command {
     private final BufferedReader reader;
     private Long taskId;
 
-    public DeleteTaskCommand() {
+    public DeleteTaskCommand(BufferedReader reader) {
         this.taskRepository = new TaskRepository<>(Task.class);
-        this.reader = new BufferedReader(new InputStreamReader(System.in));;;
+        this.reader = reader;
     }
 
     @Override

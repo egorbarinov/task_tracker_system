@@ -13,9 +13,9 @@ public class CreateUserCommand implements Command {
     private final BufferedReader reader;
     private String name;
 
-    public CreateUserCommand() {
+    public CreateUserCommand(BufferedReader reader) {
         this.userRepository = new UserRepository<>(User.class);
-        this.reader = new BufferedReader(new InputStreamReader(System.in));
+        this.reader = reader;
     }
 
     @Override

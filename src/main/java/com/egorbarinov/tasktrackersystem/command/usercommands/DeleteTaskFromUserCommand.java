@@ -20,10 +20,10 @@ public class DeleteTaskFromUserCommand implements Command {
     private Long taskId;
     private boolean lock = true;
 
-    public DeleteTaskFromUserCommand() {
+    public DeleteTaskFromUserCommand(BufferedReader reader) {
         this.taskRepository = new TaskRepository<>(Task.class);
         this.userRepository = new UserRepository<>(User.class);
-        this.reader = new BufferedReader(new InputStreamReader(System.in));;;
+        this.reader = reader;
     }
 
     @Override

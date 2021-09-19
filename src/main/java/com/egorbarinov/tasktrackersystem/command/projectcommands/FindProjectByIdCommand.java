@@ -13,9 +13,9 @@ public class FindProjectByIdCommand implements Command {
     private final BufferedReader reader;
     private Long projectId;
 
-    public FindProjectByIdCommand() {
+    public FindProjectByIdCommand(BufferedReader reader) {
         this.projectRepository = new ProjectRepository<>(Project.class);
-        this.reader = new BufferedReader(new InputStreamReader(System.in));
+        this.reader = reader;
     }
 
     @Override

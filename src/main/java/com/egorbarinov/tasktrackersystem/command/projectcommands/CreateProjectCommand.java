@@ -13,9 +13,9 @@ public class CreateProjectCommand implements Command {
     private final BufferedReader reader;
     private String name;
 
-    public CreateProjectCommand() {
+    public CreateProjectCommand(BufferedReader reader) {
         this.projectRepository = new ProjectRepository<>(Project.class);
-        reader = new BufferedReader(new InputStreamReader(System.in));
+        this.reader = reader;
     }
 
     @Override

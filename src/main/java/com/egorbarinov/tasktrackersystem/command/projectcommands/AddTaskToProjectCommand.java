@@ -13,17 +13,16 @@ import java.io.InputStreamReader;
 public class AddTaskToProjectCommand implements Command {
     private final TaskRepository<Task> taskRepository;
     private final ProjectRepository<Project> projectRepository;
-
     private final BufferedReader reader;
     private Project project;
     private Long taskId;
     private Long projectId;
     private boolean lock = true;
 
-    public AddTaskToProjectCommand() {
+    public AddTaskToProjectCommand(BufferedReader reader) {
         this.projectRepository = new ProjectRepository<>(Project.class);
         this.taskRepository = new TaskRepository<>(Task.class);
-        this.reader = new BufferedReader(new InputStreamReader(System.in));
+        this.reader = reader;
     }
 
     @Override

@@ -13,9 +13,9 @@ public class CreateTaskCommand implements Command {
     private final BufferedReader reader;
     private String name;
 
-    public CreateTaskCommand() {
+    public CreateTaskCommand(BufferedReader reader) {
         this.taskRepository = new TaskRepository<>(Task.class);
-        reader = new BufferedReader(new InputStreamReader(System.in));
+        this.reader = reader;
     }
 
     @Override

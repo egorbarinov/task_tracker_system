@@ -17,11 +17,10 @@ public class ShowingAllTaskByUserCommand implements Command {
     private final TaskRepository<Task> taskRepository;
     private final BufferedReader reader;
     private Long userId;
-
-    public ShowingAllTaskByUserCommand() {
+    public ShowingAllTaskByUserCommand(BufferedReader reader) {
         this.userRepository = new UserRepository<>(User.class);
         this.taskRepository = new TaskRepository<>(Task.class);
-        this.reader = new BufferedReader(new InputStreamReader(System.in));
+        this.reader = reader;
     }
 
     @Override

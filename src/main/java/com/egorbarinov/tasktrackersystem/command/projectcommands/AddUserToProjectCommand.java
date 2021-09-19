@@ -19,10 +19,10 @@ public class AddUserToProjectCommand implements Command {
     private Long projectId;
     private boolean lock = true;
 
-    public AddUserToProjectCommand() {
+    public AddUserToProjectCommand(BufferedReader reader) {
         this.projectRepository = new ProjectRepository<>(Project.class);
         this.userRepository = new UserRepository<>(User.class);
-        reader = new BufferedReader(new InputStreamReader(System.in));
+        this.reader = reader;
     }
 
     private void findProjectById() {

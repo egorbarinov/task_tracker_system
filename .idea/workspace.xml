@@ -7,9 +7,22 @@
     <list default="true" id="77c7d017-72c3-4611-8b29-64cda8c8091c" name="Default Changelist" comment="renamed the classes in the command package">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/CommandStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/CommandStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddTaskToProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddTaskToProjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddUserToProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/AddUserToProjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/CreateProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/CreateProjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteProjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteUserFromProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/DeleteUserFromProjectCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/FindProjectByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/projectcommands/FindProjectByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/CreateTaskCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/CreateTaskCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/DeleteTaskCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/DeleteTaskCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/FindTaskByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/FindTaskByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/ShowingAllTaskByUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/taskcommands/ShowingAllTaskByUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/AddTaskToUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/AddTaskToUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/CreateUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/CreateUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteTaskFromUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteTaskFromUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/DeleteUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/FindUserByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egorbarinov/tasktrackersystem/command/usercommands/FindUserByIdCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

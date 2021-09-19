@@ -13,9 +13,9 @@ public class DeleteUserCommand implements Command {
     private final BufferedReader reader;
     private Long userId;
 
-    public DeleteUserCommand() {
+    public DeleteUserCommand(BufferedReader reader) {
         this.userRepository = new UserRepository<>(User.class);
-        this.reader = new BufferedReader(new InputStreamReader(System.in));    }
+        this.reader = reader;    }
 
     @Override
     public void execute() {
